@@ -9,7 +9,7 @@ export default defineConfig({
         react(),
         tailwindcss(),
     ],
-    base: "/Halo-Support-Services",
+    base: "/Halo-Support-Services/",
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src"),
