@@ -11,7 +11,7 @@ type TeamMemberCardProps = {
 const TeamMemberCard = ({ name, description, imagePath, url }: TeamMemberCardProps) => {
   return (
     <Card className="p-4 max-w-4xl bg-white">
-      <div className="flex flex-row gap-6">
+      <div className="flex flex-wrap gap-6">
         <div className="flex-1 flex flex-col">
           <h1 className="text-4xl text-primary font-bold uppercase">{name}</h1>
           <p className="mt-4 text-primary uppercase">{description}</p>

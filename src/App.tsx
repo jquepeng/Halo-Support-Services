@@ -12,18 +12,20 @@ function App() {
     return (
         <div className="w-full flex flex-col gap-4 items-center min-h-screen">
             <div className={"w-full h-48 bg-primary flex items-center justify-center"}>
-                <img src={HSSLogo} alt="Halo Support Service Logo" height="250" width="250" className="shrink-0"/>
+                <img src={HSSLogo} alt="Halo Support Service Logo" height="250" width="250" className="md:shrink-0"/>
                 <h2 className={"text-white font-bold text-3xl text-center"}>WELCOME TO HALO SUPPORT SERVICES!</h2>
             </div>
             <Section>
-                <div className={"flex w-full gap-4"}>
-                    <div className="flex flex-1 flex-col justify-between">
+                <div className={"flex flex-wrap-reverse w-full gap-4 justify-center"}>
+                    <div className="flex flex-1 max-w-[560px] flex-col justify-between">
                         <h1 className="text-primary font-bold text-5xl">NDIS Support Services</h1>
                         <Button className="bg-primary text-white" onClick={() => setCount((count) => count + 1)}>
                             count is {count}
                         </Button>
                     </div>
-                    <div className="flex-1 h-78 bg-black"></div>
+                    <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
                 </div>
             </Section>
             <Section>
@@ -37,8 +39,10 @@ function App() {
                 </Card>
             </Section>
             <Section>
-                <TeamMemberCard name={"Test"} description={"Test"} imagePath={HSSLogo} />
-                <ServiceOptionCard name={"Support Work"} description={"I BELIEVE LIAM LOVES BRANDONE SO MUCH HE SAID HE IS GOING TO WORK WITH HIM FOR FREE FROM NOW ON!"} imagePath={HSSLogo} url={"test"}/>
+                <TeamMemberCard name={"Test"} description={"Test"} imagePath={HSSLogo}/>
+                <ServiceOptionCard name={"Support Work"}
+                                   description={"I BELIEVE LIAM LOVES BRANDONE SO MUCH HE SAID HE IS GOING TO WORK WITH HIM FOR FREE FROM NOW ON!"}
+                                   imagePath={HSSLogo} url={"test"}/>
             </Section>
         </div>
     )
