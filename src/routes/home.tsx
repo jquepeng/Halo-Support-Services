@@ -1,16 +1,21 @@
-import {useState} from 'react'
-import {Button} from "@/components/ui/button.tsx";
+import {createFileRoute} from '@tanstack/react-router'
+import {useState} from "react";
 import HSSLogo from "@/assets/Halo-Support-Services-Logo-small(White).svg";
 import {Section} from "@/components/Section.tsx";
+import {Button} from "@/components/ui/button.tsx";
 import {Card} from "@/components/ui/card.tsx";
 import TeamMemberCard from "@/components/Team-member-card.tsx";
 import ServiceOptionCard from "@/components/Service-option-card.tsx";
 
-function App() {
+export const Route = createFileRoute('/home')({
+    component: Home,
+})
+
+function Home() {
     const [count, setCount] = useState(0)
 
     return (
-        <div className="w-full flex flex-col gap-4 items-center min-h-screen">
+        <div className="w-full flex flex-col gap-4 items-center min-h-screen pt-nav">
             <div className={"w-full h-48 bg-primary flex items-center justify-center"}>
                 <img src={HSSLogo} alt="Halo Support Service Logo" height="250" width="250" className="md:shrink-0"/>
                 <h2 className={"text-white font-bold text-3xl text-center"}>WELCOME TO HALO SUPPORT SERVICES!</h2>
@@ -42,10 +47,9 @@ function App() {
                 <TeamMemberCard name={"Test"} description={"Test"} imagePath={HSSLogo}/>
                 <ServiceOptionCard name={"Support Work"}
                                    description={"I BELIEVE LIAM LOVES BRANDONE SO MUCH HE SAID HE IS GOING TO WORK WITH HIM FOR FREE FROM NOW ON!"}
-                                   imagePath={HSSLogo} url={"test"}/>
+                                   imagePath={HSSLogo} url={"test"}
+                />
             </Section>
         </div>
     )
 }
-
-export default App
