@@ -1,0 +1,1 @@
+import{j as s}from"./index-CUIrg0Wf.js";function e({children:x,className:t}){return s.jsx("section",{className:`w-full  ${t||""}`,children:s.jsx("div",{className:"mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ",children:x})})}export{e as S};
