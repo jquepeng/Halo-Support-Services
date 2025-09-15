@@ -1,0 +1,1 @@
+import{j as o,g as t}from"./index-THYR-pOA.js";function e({className:r,...a}){return o.jsx("div",{"data-slot":"card",className:t("bg-card text-card-foreground flex flex-col gap-6 rounded-xl",r),...a})}export{e as C};
