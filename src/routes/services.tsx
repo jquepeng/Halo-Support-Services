@@ -2,7 +2,7 @@ import {createFileRoute} from '@tanstack/react-router'
 import {Section} from "@/components/Section.tsx";
 import {Separator} from "@/components/ui/separator.tsx";
 import HSSLogo from "@/assets/Halo-Support-Services-Logo-small(White).svg";
-import ServiceOptionCard from "@/components/Service-option-card.tsx";
+import ServiceOptionCard from "@/components/ServiceOptionCard.tsx";
 
 export const Route = createFileRoute('/services')({
     component: Services,
@@ -15,7 +15,7 @@ function Services() {
                 <Section>
                     <div className="flex flex-col gap-4 items-center">
                         <h1 className={"text-6xl text-center group"}>What can <span
-                            className={"text-transparent bg-clip-text font-semibold gradient group-hover:animate-gradient"}>we</span> do
+                            className={"font-semibold text-transparent bg-clip-text gradient group-hover:animate-gradient"}>we</span> do
                             for <span
                                 className={"text-transparent bg-clip-text font-semibold gradient group-hover:animate-gradient"}>
                                 you

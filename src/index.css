@@ -41,6 +41,8 @@
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-ring: var(--sidebar-ring);
+    --color-facebook: var(--facebook);
+    --color-twitter: var(--twitter);
 }
 
 :root {
@@ -78,6 +80,8 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+    --facebook: oklch(0.5237 0.1259 262.97);
+    --twitter: oklch(0.6818 0.1584 243.35)
 }
 
 .dark {
@@ -133,6 +137,14 @@
     background-position: 0% 0%;
 }
 
+@utility bg-pos-25 {
+    background-position: 25% 25%;
+}
+
+@utility bg-pos-50 {
+    background-position: 50% 50%;
+}
+
 @utility bg-pos-100 {
     background-position: 100% 100%;
 }
@@ -145,11 +157,33 @@
     min-height: calc(100vh - var(--nav-height));
 }
 
+@utility px-responsive {
+    @apply px-4 sm:px-6 lg:px-8
+}
+
 
 /* === Button utilities === */
+
 @utility gradient {
     @apply transition-all duration-500 bg-gradient-to-tl
     from-primary via-ndis to-primary
+    bg-size-200 bg-pos-0
+}
+
+@utility gradient-hidden {
+    @apply transition-all duration-500 bg-gradient-to-tl
+    from-ndis via-primary to-primary
+    bg-size-200 bg-pos-0
+}
+
+@utility gradient-hide {
+    @apply transition-all duration-500 bg-gradient-to-tl
+    from-primary via-primary to-ndis
+    bg-size-200 bg-pos-0
+}
+@utility gradient-hide-to-tl {
+    @apply transition-all duration-500 bg-gradient-to-tl
+    from-ndis via-primary to-primary
     bg-size-200 bg-pos-0
 }
 

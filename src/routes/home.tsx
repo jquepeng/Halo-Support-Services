@@ -4,8 +4,8 @@ import HSSLogo from "@/assets/Halo-Support-Services-Logo-small(White).svg";
 import {Section} from "@/components/Section.tsx";
 import {Button} from "@/components/ui/button.tsx";
 import {Card} from "@/components/ui/card.tsx";
-import TeamMemberCard from "@/components/Team-member-card.tsx";
-import ServiceOptionCard from "@/components/Service-option-card.tsx";
+import TeamMemberCard from "@/components/TeamMemberCard.tsx";
+import ServiceOptionCard from "@/components/ServiceOptionCard.tsx";
 
 export const Route = createFileRoute('/home')({
     component: Home,
