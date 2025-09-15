@@ -1,4 +1,6 @@
 import {ScrollArea, ScrollBar} from "@/components/ui/scroll-area"
+import {AspectRatio} from "@/components/ui/aspect-ratio.tsx";
+import LoadImage from "@/components/LoadImage.tsx";
 
 export interface Profile {
     name: string
@@ -41,20 +43,19 @@ export default function ScrollableGallery() {
         >
             <ScrollArea className="w-full rounded-md whitespace-nowrap">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex space-x-8 pb-8">
-                    {works.map((profile) => (
+                    {works.map((profile, index) => (
                         <figure
                             key={profile.name}
-                            className="flex flex-col shrink-0 w-72 overflow-hidden bg-background"
+                            className="flex flex-col shrink-0 w-72 animate-fade-left"
+                            style={{animationDelay: `${index * 200}ms`}}
                         >
-                            <div className="aspect-square w-full rounded-lg overflow-hidden">
-                                <img
+                            <AspectRatio ratio={1} className="w-full rounded-lg overflow-hidden">
+                                <LoadImage
                                     src={profile.portrait}
-                                    alt={`Photo by ${profile.name}`}
+                                    alt={`Photo of ${profile.name}`}
                                     className="h-full w-full object-cover"
-                                    width={288}
-                                    height={288}
                                 />
-                            </div>
+                            </AspectRatio>
 
                             <figcaption className="flex flex-col flex-1 py-2 px-1">
                                 <h4 className="text-lg font-semibold">{profile.name}</h4>

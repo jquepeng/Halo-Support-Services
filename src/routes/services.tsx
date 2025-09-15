@@ -15,9 +15,9 @@ function Services() {
                 <Section>
                     <div className="flex flex-col gap-4 items-center">
                         <h1 className={"text-6xl text-center group"}>What can <span
-                            className={"font-semibold text-transparent bg-clip-text gradient group-hover:animate-gradient"}>we</span> do
+                            className={"font-semibold text-transparent bg-clip-text gradient group-hover:animate-gradient delay-200 group-hover:delay-200 animate-fade-down "}>we</span> do
                             for <span
-                                className={"text-transparent bg-clip-text font-semibold gradient group-hover:animate-gradient"}>
+                                className={"text-transparent bg-clip-text font-semibold gradient group-hover:animate-gradient delay-400 group-hover:delay-200 animate-fade-down "}>
                                 you
                                 </span>?
                         </h1>

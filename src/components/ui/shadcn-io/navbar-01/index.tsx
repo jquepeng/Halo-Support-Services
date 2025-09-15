@@ -158,7 +158,7 @@ export const Navbar01 = React.forwardRef<HTMLElement, Navbar01Props>(
                                         <NavigationMenuItem key={index}>
                                             <Button
                                                 variant="ghost"
-                                                className={pathname === link.href ? 'bg-accent dark:bg-accent/50' : ''}
+                                                className={pathname === link.href ? 'bg-accent dark:bg-accent/50 rounded-b-none border-b-3 border-primary' : ''}
                                                 onClick={() => handleNavigate(link.href)}
                                             >
                                                 {link.label}

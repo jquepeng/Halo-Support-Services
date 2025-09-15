@@ -4,11 +4,12 @@ type TeamMemberCardProps = {
   name: string;
   description: string;
   imagePath: string;
+  className?: string;
 };
 
-const TeamMemberCard = ({ name, description, imagePath }: TeamMemberCardProps) => {
+const TeamMemberCard = ({ name, description, imagePath, className }: TeamMemberCardProps) => {
   return (
-    <Card className="p-4 max-w-xl">
+    <Card className={`p-4 max-w-xl ${className}`}>
       <div className="flex flex-wrap-reverse gap-6">
         <div className="flex-1 flex flex-col">
           <h1 className="text-4xl text-primary font-bold">{name}</h1>
