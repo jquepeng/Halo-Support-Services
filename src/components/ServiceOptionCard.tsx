@@ -10,16 +10,26 @@ type ServiceOptionCardProps = {
     imagePath: string;
     url: string;
     reversed?: boolean;
+    className?: string;
+    style?: React.CSSProperties;
 };
 
-const ServiceOptionCard = ({name, description, imagePath, url, reversed = false}: ServiceOptionCardProps) => {
+const ServiceOptionCard = ({
+                               name,
+                               description,
+                               imagePath,
+                               url,
+                               reversed = false,
+                               ...props
+                           }: ServiceOptionCardProps) => {
     return (
-        <Card className="p-4 max-w-4xl w-full bg-white">
+        <Card className={cn("p-4 max-w-4xl w-full bg-white animation-duration-450", props.className)} style={props.style}>
             <div
                 className={cn(
                     "flex flex-col sm:flex-row gap-4 w-full",
-                    reversed && "md:flex-row-reverse"
+                    reversed && "md:flex-row-reverse",
                 )}
+                style={props.style}
             >
                 {/* Text content */}
                 <div className="flex-1 flex flex-col">
